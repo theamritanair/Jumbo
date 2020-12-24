@@ -9,6 +9,8 @@ module.exports = {
         } else {
             var memrole = message.guild.roles.cache.find(role => role.name === args[0]);
             const highest = message.member.roles.highest;
+            console.log(memrole+ "this is what you want")
+            console.log(highest)
             if(highest.comparePositionTo(memrole) <= 0){
                 return message.channel.send('You cannot add roles equal/higher to that member\'s highest role')
             }else{

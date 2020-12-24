@@ -5,9 +5,9 @@ module.exports = {
     description: 'Shows display picture',
     execute(message, args) {
         if (!args.length) {
-            return message.reply("", { files: [message.author.avatarURL({ dynamic: true, size: 2048 })] });
+            return message.channel.send("", { files: [message.author.avatarURL({ dynamic: true, size: 2048 })] });
         } else {
-            message.reply("", { files: [message.mentions.users.first().avatarURL({ dynamic: true, size: 2048 })] })
+            message.channel.send("", { files: [message.mentions.users.first().avatarURL({ dynamic: true, size: 2048 })] })
         }
     },
 };

@@ -7,7 +7,6 @@ module.exports = {
     description: 'Sends random cat pictures',
     async execute(message, args) {
         const { file } = await fetch('https://aws.random.cat/meow').then(response => response.json());
-    
         message.channel.send(file);
     },
 };
