@@ -28,7 +28,7 @@ client.on('message', message => {
 
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const commandName = args.shift().toLowerCase();
-    console.log(args)
+    // console.log(args)
     const command = client.commands.get(commandName) ||
         client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
@@ -57,7 +57,7 @@ client.on('message', message => {
 
         if (now < expirationTime) {
             const timeLeft = (expirationTime - now) / 1000;
-            return message.reply(`please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.name}\` command.`);
+            return message.reply(`Please wait for ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.name}\` command.`);
         }
     }
 

@@ -4,7 +4,8 @@ module.exports = {
     description: 'Status Info',
     execute(message, args) {
         if (!args.length) {
-            return message.reply(message.author.presence.status);
+            console.log(message.author.presence.activities)
+            return message.reply("just trying");
         } else {
             message.reply("", { files: [message.mentions.users.first().avatarURL({ size: 2048 })] })
         }

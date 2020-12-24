@@ -12,6 +12,7 @@
     "discord.js": "^12.4.1",
     "dotenv": "^8.2.0",
     "eslint": "^7.14.0",
+    "node-fetch": "^2.6.1",
     "relevant-urban": "^2.0.0"
   }
 }
