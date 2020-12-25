@@ -7,7 +7,7 @@ module.exports = {
 		args.splice(0, 1);
 		const filteredMessage = args.join(' ');
 		function reminder() {
-			message.reply('\n**REMINDER:**' + filteredMessage);
+			message.reply('\n**REMINDER: **' + filteredMessage);
 		}
 
 		function timeRespond(time, timeType) {
