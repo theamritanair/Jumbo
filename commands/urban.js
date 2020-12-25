@@ -34,7 +34,7 @@ module.exports = {
                 return ['❌'].includes(reaction.emoji.name)
             };
 
-            message.awaitReactions(filter, { time: 3000 }).then(collected => {
+            message.awaitReactions(filter, { time: 6000 }).then(collected => {
                 const reaction = collected.first();
 
                 if(reaction.emoji.name === '❌'){
