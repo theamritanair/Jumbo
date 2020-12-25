@@ -27,6 +27,23 @@ module.exports = {
         .addField("Rating",`👍 ${search.thumbsUp} 👎 ${search.thumbsDown}`)
         .setColor(config.GREEN)
 
-        message.channel.send(urban);
+        message.channel.send({ embed: urban }).then(async message => {
+            if (defin.length < 1) return
+            await message.react('❌')
+            const filter = (reaction, user) => {
+                return ['❌'].includes(reaction.emoji.name)
+            };
+
+            message.awaitReactions(filter, { time: 3000 }).then(collected => {
+                const reaction = collected.first();
+
+                if(reaction.emoji.name === '❌'){
+                    message.suppressEmbeds(true);
+                }
+                message.reactions.removeAll().catch(error => console.error('Failed to clear reactions: ', error));
+                message.delete()
+            });
+
+        });
     }
 }
