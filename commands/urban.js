@@ -31,7 +31,7 @@ module.exports = {
 		message.channel.send({ embed: urban }).then(async message => {
 			if (defin.length < 1) return;
 			await message.react('❌');
-			const filter = (reaction, user) => {
+			const filter = (reaction) => {
 				return ['❌'].includes(reaction.emoji.name);
 			};
 

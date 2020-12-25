@@ -11,8 +11,11 @@
   "dependencies": {
     "discord.js": "^12.4.1",
     "dotenv": "^8.2.0",
-    "eslint": "^7.16.0",
+    "moment": "^2.29.1",
     "node-fetch": "^2.6.1",
     "relevant-urban": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.16.0"
   }
 }
