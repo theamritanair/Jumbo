@@ -2,6 +2,7 @@ module.exports = {
 	name: 'getrole',
 	aliases: ['gr'],
 	cooldown: 3,
+	usage: '[role]',
 	description: 'Adds the role',
 	execute(message, args) {
 		if (!args.length) {

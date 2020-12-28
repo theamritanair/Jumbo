@@ -2,7 +2,7 @@ const clap = '👏';
 module.exports = {
 	name: 'clap',
 	cooldown: 2,
-	usage: 'clap [what you want to scream]',
+	usage: '[what you want to scream]',
 	description: 'I scream.',
 	execute(message, args) {
 		if (!args.length) {

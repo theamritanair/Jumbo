@@ -2,6 +2,7 @@ module.exports = {
 	name: 'droprole',
 	aliases: ['dr'],
 	cooldown: 2,
+	usage: ['role'],
 	description: 'Drops the role. ',
 	execute(message, args) {
 		if (!args.length) {

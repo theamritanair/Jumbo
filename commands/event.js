@@ -2,6 +2,7 @@ module.exports = {
 	name: 'event',
 	cooldown: 2,
 	aliases: ['e'],
+	usage: '[mention] description',
 	description: 'Pings for event. Ping a particular role for event by !event role-name message. Else pings everyone. ',
 	execute(message, args) {
 		if(message.mentions.roles.size != '0') {

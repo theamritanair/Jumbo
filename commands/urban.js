@@ -9,6 +9,7 @@ module.exports = {
 	name: 'urban',
 	cooldown: 2,
 	aliases: ['u'],
+	usage: '[word]',
 	description: 'Pings the user when the reminder is set',
 	async execute(message, args) {
 		const worder = args[0];

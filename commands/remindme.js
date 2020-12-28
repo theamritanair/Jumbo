@@ -1,6 +1,7 @@
 module.exports = {
 	name: 'remindme',
 	cooldown: 2,
+	usage: 'time[m/d/s/h] reason',
 	description: 'Pings the user when the reminder is set',
 	async execute(message, args) {
 		const splitMessage = args[0];
