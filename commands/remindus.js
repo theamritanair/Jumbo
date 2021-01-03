@@ -1,14 +1,26 @@
 module.exports = {
-	name: 'remindme',
+	name: 'remindus',
 	cooldown: 2,
 	usage: 'time[m/d/s/h] reason',
 	description: 'Pings the user when the reminder is set',
 	async execute(message, args) {
 		const splitMessage = args[0];
+		const role = args[1];
 		args.splice(0, 1);
+		args.splice(0, 1);
+		console.log(args);
 		const filteredMessage = args.join(' ');
+		if(role != 'everyone') {
+			const memrole = message.guild.roles.cache.find(mention => mention.name === role).id;
+		}
 		function reminder() {
-			message.reply('\n**REMINDER: **' + filteredMessage);
+			if(role == 'everyone') {
+				message.channel.send('@everyone' + '\n**REMINDER: **' + filteredMessage);
+			}
+			else{
+				message.channel.send('<@&' + memrole + '>' + '\n**REMINDER: **' + filteredMessage);
+			}
+
 		}
 
 		function timeRespond(time, timeType) {
