@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'remindus',
 	cooldown: 2,
-	usage: 'time[m/d/s/h] reason',
+	usage: 'time[m/d/s/h] role reason',
 	description: 'Pings the user when the reminder is set',
 	async execute(message, args) {
 		const splitMessage = args[0];
