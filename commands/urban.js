@@ -1,6 +1,5 @@
 const ud = require('relevant-urban');
 const Discord = require('discord.js');
-const config = require('../config.json');
 function randomNumber(min, max) {
 	const r = Math.random() * (max - min) + min;
 	return Math.floor(r);
@@ -26,8 +25,7 @@ module.exports = {
 			.setURL(search.urbanURL)
 			.setDescription(search.definition)
 			.addField('Example', search.example)
-			.addField('Rating', `👍 ${search.thumbsUp} 👎 ${search.thumbsDown}`)
-			.setColor(config.GREEN);
+			.addField('Rating', `👍 ${search.thumbsUp} 👎 ${search.thumbsDown}`);
 
 		message.channel.send({ embed: urban }).then(async message => {
 			if (defin.length < 1) return;
